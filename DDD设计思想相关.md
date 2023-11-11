@@ -79,6 +79,16 @@ Do是数据库表映射，贫血模型。
 data mapper，就是传统三层架构中的mapper，比如mybatis那种。
 data converter，主要是提供两个功能，一是讲DO转换成Entity/VO，二是将Entity/VO转换成DO。
 
+### 复杂业务流程设计模式
+Orchestration vs Choreography
+Orchestration：命令驱动，上游强依赖下游，灵活性较差，上游为业务负责。
+Choreography：事件驱动，无调用依赖，但是有代码依赖，可以算成是下游依赖上游。灵活性较强。没有全局负责人
+
+具体选择哪种模式，根据业务要求来判断，如果上游要感知下游，那就是命令驱动，就是Orchestration。
+
+反之上游不依赖下游，反而下游依赖上游的通知，则是事件驱动，应该选择Choreography
+
+
 
 
 
