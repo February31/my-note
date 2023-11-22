@@ -34,6 +34,8 @@ DDD的代码结构是最外层的基础设施层（对各类基础设施进行�
 ### 领域层
 DDD最核心的层。通常由Entity、ValueObject、Domain Service。
 
+Value object：只关心其是什么，不用关心是哪一个，也就是不需要唯一标识。应该是不变的。
+
 Entity：包含ID和内部状态。是可以独立存在的。最重要的核心是保证实体的不变性。
 
 Domain Service：用来辅助两个以上的Entity建立联系。
